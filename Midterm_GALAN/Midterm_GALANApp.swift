@@ -9,9 +9,19 @@ import SwiftUI
 
 @main
 struct Midterm_GALANApp: App {
+    @State private var currentScreen: String = "signin"
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Group {
+                if currentScreen == "signup" {
+                    Signup(currentScreen: $currentScreen)
+                } else if currentScreen == "signin" {
+                    SignIn(currentScreen: $currentScreen)
+                } else if currentScreen == "home" {
+                    MainTabView()
+                }
+            }
+            
         }
     }
 }
