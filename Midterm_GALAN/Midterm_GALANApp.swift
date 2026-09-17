@@ -13,10 +13,10 @@ struct Midterm_GALANApp: App {
     var body: some Scene {
         WindowGroup {
             Group {
-                if currentScreen == "signup" {
-                    Signup(currentScreen: $currentScreen)
-                } else if currentScreen == "signin" {
+                if currentScreen == "signin" {
                     SignIn(currentScreen: $currentScreen)
+                } else if currentScreen == "signup" {
+                    Signup(currentScreen: $currentScreen)
                 } else if currentScreen == "home" {
                     MainTabView()
                 }

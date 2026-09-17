@@ -49,34 +49,12 @@ struct LogoDesign: View {
                 
                 Text("Alaga")
                     .font(.system(size: 85, weight: .bold, design: .rounded))
-                    .foregroundStyle(.black)
-                    .overlay {
-                        ZStack {
-                            AngularGradient(
-                                stops: [
-                                    Gradient.Stop(color: Color(red: 72/255, green: 200/255, blue: 104/255), location: 0.83),
-                                    Gradient.Stop(color: Color(red: 35/255, green: 98/255, blue: 51/255), location: 0.93)
-                                ],
-                                center: .center,
-                                startAngle: .degrees(0),
-                                endAngle: .degrees(360)
-                            )
-                            AngularGradient(
-                                stops: [
-                                    Gradient.Stop(color: Color(red: 0/255, green: 77/255, blue: 255/255), location: 0.35),
-                                    Gradient.Stop(color: Color(red: 0/255, green: 73/255, blue: 243/255).opacity(0.0), location: 0.45)
-                                ],
-                                center: .center,
-                                startAngle: .degrees(90),
-                                endAngle: .degrees(360)
-                            )
-                        }
-                        .mask(
-                            Text("Alaga")
-                                .font(.system(size: 85, weight: .bold, design: .rounded))
-                        )
-                    }
-                    .offset(x: 2)
+                    .foregroundStyle(AngularGradient(colors :
+                                                        [Color(red: 24/255, green: 104/255, blue: 174/255),
+                                                               Color(red: 45/255, green: 160/255, blue: 140/255),
+                                                               Color(red: 24/255, green: 104/255, blue: 174/255)],
+                                                     center: .center,
+                                                     angle: .degrees(135)))
                 }
             .padding()
             
