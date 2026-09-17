@@ -18,9 +18,9 @@ struct ReminderTab: View {
                 endAngle: .degrees(360)
             )
             .ignoresSafeArea()
-            VStack(alignment: .leading, spacing: 10) {
+            VStack(alignment: .center, spacing: 5) {
                 
-                ReminderTabPreviews()
+                Title()
                     .padding(.horizontal)
                     .padding(.top, 10)
                 
@@ -39,10 +39,10 @@ struct ReminderTab: View {
         }
     }
 }
-struct ReminderTabPreviews: View {
+struct Title: View {
     var body: some View {
-        Text("Wala Pa")
-            .font(.system(size: 20, weight: .semibold, design: .rounded))
+        Text("Reminders")
+            .font(.system(size: 45, weight: .bold, design: .rounded))
     }
     
 }
